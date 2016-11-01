@@ -26,7 +26,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 Plugin 'ascenator/L9', {'name': 'newL9'}
+" for Ansible
 Plugin 'chase/vim-ansible-yaml'
+" for nodejs run
+Plugin 'thinca/vim-quickrun'
+let g:quickrun_config={'*': {'split': ''}}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -56,6 +56,9 @@ set expandtab
 set shiftwidth=2
 set number
 set nocompatible
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,cp932,utf-8
+set fileformats=unix,dos,mac
 
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |

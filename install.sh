@@ -1,4 +1,4 @@
-#!/bin/bash -exu
+#!/bin/bash -eu
 
 function common() {
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -11,12 +11,22 @@ function rhel_prepare() {
   yum install ruby ruby-devel rake -y
 }
 
+function debian_prepare() {
+  sudo apt-get update -y
+  sudo apt-get dist-upgrade -y
+}
+
 if [ "$(uname)" == 'Darwin' ]; then
   common
 
-# Only rhel
-elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+# RHEL
+elif [ -e /etc/redhat-release ]; then
   rhel_prepare
+  common
+
+# Debian
+elif [ -e /etc/lsb-release ]; then
+  debian_prepare
   common
 
 else

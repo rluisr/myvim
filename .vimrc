@@ -64,3 +64,16 @@ augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
 augroup END
+
+""""""""""""""""""""""""""""""""
+"  Key Maps -- Command-T
+""""""""""""""""""""""""""""""""
+let s:commandTHeight=18
+let g:CommandTMaxHeight=s:commandTHeight
+let g:CommandTMinHeight=s:commandTHeight
+let g:CommandTClearMap=['<C-u>', '<C-w>']
+let g:CommandTCancelMap=['<C-[>', '<C-c>', '<Esc>']
+let g:CommandTMaxDepth=20
+nnoremap  ,t :CommandTFlush<CR>\|:CommandT<Space><UP>
+nnoremap  <silent> ,l :CommandTFlush<CR>\|:CommandT<CR>
+nnoremap  <silent> ,b :CommandTFlush<CR>\|:CommandTBuffer<CR>

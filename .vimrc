@@ -54,7 +54,6 @@ set tabstop=2
 set autoindent
 set expandtab
 set shiftwidth=2
-set number
 set nocompatible
 set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,cp932,utf-8

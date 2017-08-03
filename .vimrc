@@ -30,6 +30,9 @@ Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'chase/vim-ansible-yaml'
 " for nodejs run
 Plugin 'thinca/vim-quickrun'
+" vim-terminal
+Plugin 'mattn/vim-terminal'
+
 let g:quickrun_config={'*': {'split': ''}}
 
 " All of your Plugins must be added before the following line

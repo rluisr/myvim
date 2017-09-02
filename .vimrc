@@ -32,6 +32,8 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'thinca/vim-quickrun'
 " vim-terminal
 Plugin 'mattn/vim-terminal'
+" go
+Plugin 'fatih/vim-go'
 
 let g:quickrun_config={'*': {'split': ''}}
 
